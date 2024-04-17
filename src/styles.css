@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'GraphikLCG-light';
+
+  src: local('Graphik LCG Light'), local('GraphikLCG-Light'),
+    url('./fonts/GraphikLCG-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GraphikLCG-semibold';
+
+  src: local('Graphik LCG Semibold'), local('GraphikLCG-Semibold'),
+    url('./fonts/GraphikLCG-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+html {
+  font-family: 'GraphikLCG-semibold';
+}
