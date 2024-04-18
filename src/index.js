@@ -105,3 +105,39 @@ dotContainer.addEventListener('click', function (e) {
     activateCurrentDot(slide);
   }
 });
+
+// ACCORDION
+
+const acc = document.getElementsByClassName('accordion__item');
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener('click', function () {
+    this.classList.toggle('accordion__item_show');
+  });
+}
+
+// FORM
+
+$(document).ready(function () {
+  $('#myForm').on('submit', function (event) {
+    event.preventDefault();
+
+    const data = {
+      name: $('#name').val(),
+      phone: $('#phone').val(),
+    };
+
+    $.ajax({
+      url: '/server_endpoint ', //указывать URL-адрес серверного обработчика
+      type: 'post',
+      data: data,
+      success: function (response) {
+        console.log('Данные успешно отправлены!');
+      },
+      error: function (error) {
+        console.error('Ошибка при отправке данных: ', error);
+      },
+    });
+  });
+});
