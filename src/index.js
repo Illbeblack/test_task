@@ -58,7 +58,7 @@ disableButton();
 
 const moveToSlide = function (slide) {
   slides.forEach(
-    (s, index) => (s.style.transform = `translateX(${(index - slide) * 120}%)`)
+    (s, index) => (s.style.transform = `translateX(${(index - slide) * 121}%)`)
   );
 };
 

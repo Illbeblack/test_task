@@ -278,6 +278,7 @@ html {
 }
 
 .thirdSection {
+  max-width: 125rem;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -314,6 +315,9 @@ html {
   align-items: center;
   justify-content: center;
 
+  background-color: var(--color-white);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
+
   transition: transform 1s;
 }
 
@@ -330,12 +334,12 @@ html {
 }
 
 .slider__btn--left {
-  left: 2%;
+  left: -5%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-  right: -2%;
+  right: -5%;
   transform: translate(50%, -50%);
   transform: rotate(180deg);
 }
