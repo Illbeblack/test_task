@@ -549,17 +549,114 @@ html {
   justify-content: space-between;
 }
 
-.input {
-  width: 38rem;
+.text-field {
+  margin-bottom: 1rem;
+}
 
-  background-color: var(--color-extralight-gray);
-  border: 0.2rem solid var(--color-extralight-gray);
+.text-field__label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.text-field__input {
+  display: block;
+
+  width: 38rem;
 
   padding: 1.6rem;
 
   font-family: 'GraphikLCG-light';
   font-size: 1.8rem;
   line-height: 3.2rem;
+
+  background-color: var(--color-extralight-gray);
+  border: 0.2rem solid var(--color-extralight-gray);
+  border-radius: 0.3rem;
+
+  transition: border-color 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.text-field__input[type='search']::-webkit-search-decoration,
+.text-field__input[type='search']::-webkit-search-cancel-button,
+.text-field__input[type='search']::-webkit-search-results-button,
+.text-field__input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.text-field__input::placeholder {
+  font-family: 'GraphikLCG-light';
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  opacity: 0.4;
+}
+
+.text-field__input:focus {
+  background-color: var(--color-white);
+  border-color: var(--color-mid-gray);
+}
+
+.text-field__input:disabled,
+.text-field__input[readonly] {
+  background-color: var(--color-white);
+  opacity: 1;
+}
+
+.text-field_floating {
+  position: relative;
+}
+
+.text-field_floating .text-field__input {
+  padding: 1.6rem;
+}
+
+.text-field_floating .text-field__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1.6rem;
+
+  font-family: 'GraphikLCG-light';
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.text-field_floating .text-field__input::-moz-placeholder {
+  color: transparent;
+}
+
+.text-field_floating .text-field__input::placeholder {
+  color: transparent;
+}
+
+.text-field_floating .text-field__input:focus,
+.text-field_floating .text-field__input:not(:placeholder-shown) {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  background-color: var(--color-white);
+  border-color: var(--color-mid-gray);
+}
+
+.text-field_floating .text-field__input:focus ~ .text-field__label,
+.text-field_floating
+  .text-field__input:not(:placeholder-shown)
+  ~ .text-field__label {
+  opacity: 0.65;
+  transform: scale(0.8) translateY(-1rem) translateX(0.6rem);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .checkbox {
