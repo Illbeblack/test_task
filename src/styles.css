@@ -186,8 +186,14 @@ html {
   font-family: 'GraphikLCG-semibold';
   color: var(--color-black);
   font-size: 2rem;
+
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
 }
 
+.greeting__btn:hover {
+  background-color: var(--color-white);
+}
 /* SECTION_1 */
 
 .firstSection {
@@ -492,7 +498,6 @@ html {
 
 .section-info {
   margin-top: 3.8rem;
-  margin-bottom: 3.8rem;
 
   display: flex;
   flex-wrap: wrap;
@@ -500,6 +505,7 @@ html {
 }
 
 .info {
+  margin-bottom: 3.8rem;
   display: flex;
   flex-direction: column;
   gap: 1.7rem;
@@ -581,6 +587,11 @@ html {
   line-height: 2.4rem;
 
   cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.form__btn:hover {
+  background-color: var(--color-primary-hover);
 }
 
 /* FOOTER */
