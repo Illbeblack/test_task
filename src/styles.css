@@ -234,11 +234,35 @@ html {
     gap: 3rem;
   }
 
+  .nav__item {
+    position: relative;
+    width: 80vw;
+    padding: 1.6rem;
+  }
+
   .nav__link {
     font-size: 1.8rem;
     line-height: 3.2rem;
     color: var(--color-black);
     text-decoration: none;
+  }
+
+  .nav__item::before,
+  .nav__item:last-child::after {
+    content: '';
+    position: absolute;
+    height: 0.2rem;
+    width: 100%;
+    background-color: var(--color-extralight-gray);
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav__item::before {
+    top: -1.5rem;
+  }
+  .nav__item:last-child::after {
+    bottom: -1.5rem;
+    left: 1.5rem;
   }
 }
 
