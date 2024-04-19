@@ -400,6 +400,7 @@ html {
 .secondSection__images {
   position: relative;
   max-width: 59rem;
+  min-width: 35rem;
 }
 
 .secondSection__back_img {
@@ -410,6 +411,27 @@ html {
 
 .secondSection__img {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .secondSection {
+    column-gap: 2.4rem;
+  }
+
+  .secondSection__desc {
+    gap: 1.5rem;
+
+    max-width: 35rem;
+  }
+
+  .secondSection__title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  .secondSection__images {
+    max-width: 35rem;
+  }
 }
 
 /* SECTION-3 */
