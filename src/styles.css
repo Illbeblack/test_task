@@ -320,16 +320,18 @@ html {
 
 .firstSection__title {
   font-size: 4rem;
+  line-height: 5.6rem;
 }
 
 .firstSection__cards {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   column-gap: 3.2rem;
 }
 
 .card {
-  width: 28rem;
+  max-width: 28rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -354,6 +356,18 @@ html {
 .card__text {
   font-family: 'GraphikLCG-light';
   font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 34rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .card__img {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
 }
 
 /* SECTION_2 */
