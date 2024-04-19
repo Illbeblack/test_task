@@ -588,6 +588,7 @@ html {
     left: 5%;
   }
 }
+
 @media (max-width: 860px) {
   .thirdSection {
     width: 41rem;
@@ -699,6 +700,12 @@ html {
   font-family: 'GraphikLCG-light';
   font-size: 1.6rem;
   line-height: 2.8rem;
+}
+
+@media (max-width: 768px) {
+  .info {
+    width: 100%;
+  }
 }
 
 /* FORM SECTION */
