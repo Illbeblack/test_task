@@ -875,6 +875,20 @@ html {
   background-color: var(--color-primary-hover);
 }
 
+@media (max-width: 840px) {
+  .form {
+    max-width: 73rem;
+    column-gap: 2.4rem;
+  }
+  .text-field__input {
+    max-width: 33rem;
+  }
+  .form__btn {
+    width: 33rem;
+    padding: 2rem 10rem;
+  }
+}
+
 /* FOOTER */
 
 .footer {
