@@ -59,11 +59,26 @@ html {
   color: var(--color-black);
 }
 
+@media (max-width: 480px) {
+  .section {
+    padding: 0 2rem;
+
+    max-width: 120rem;
+    color: var(--color-black);
+  }
+}
+
 .container {
   width: 100vw;
   background-color: var(--color-extralight-gray);
   padding: 3rem;
   margin-top: 8rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 5.6rem;
+  }
 }
 
 .open {
@@ -75,7 +90,7 @@ html {
 .header {
   position: relative;
   margin-bottom: 8rem;
-  width: 100vw;
+  max-width: 100%;
   height: 100vh;
   background-image: url(./img/Lunch_atop_a_Skyscraper\ 1.jpg);
 }
@@ -266,6 +281,12 @@ html {
   }
 }
 
+@media (max-width: 480px) {
+  .header {
+    margin-bottom: 5.6rem;
+  }
+}
+
 /* GREETING */
 
 .header__greeting {
@@ -329,6 +350,25 @@ html {
     font-size: 1.6rem;
     line-height: 2.8rem;
     margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__greeting {
+    max-width: 28rem;
+    left: calc(50vw - 14rem);
+    top: calc(50vh - 10rem);
+  }
+
+  .greeting__header {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  .greeting__text {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-bottom: 2.6rem;
   }
 }
 
@@ -455,6 +495,23 @@ html {
 
   .secondSection__images {
     max-width: 35rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .secondSection {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .secondSection__desc {
+    max-width: 34rem;
+  }
+  .secondSection__images {
+    max-width: 34rem;
   }
 }
 
@@ -614,11 +671,30 @@ html {
 }
 
 @media (max-width: 860px) {
+  .container {
+    padding: 0;
+  }
   .thirdSection {
     width: 41rem;
   }
   .slider {
     width: 110%;
+  }
+  .dots {
+    bottom: 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .thirdSection {
+    padding: 0;
+    width: 32rem;
+  }
+  .slider {
+    width: 28rem;
+  }
+  .slide {
+    left: -2%;
   }
 }
 
@@ -694,6 +770,12 @@ html {
 
 .accordion__item:not(.accordion__item_show) .accordion__icon {
   transform: rotate(0deg);
+}
+
+@media (max-width: 480px) {
+  .accordion-section {
+    margin-top: 5.6rem;
+  }
 }
 
 /* SECTION INFO */
@@ -910,6 +992,24 @@ html {
   .form__btn {
     width: 33rem;
     padding: 2rem 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+    max-width: 28rem;
+    gap: 2rem;
+  }
+  .form__title {
+    margin-top: 5.6rem;
+  }
+  .text-field__input {
+    max-width: 27rem;
+  }
+  .form__btn {
+    width: 27rem;
+    padding: 2rem 5rem;
   }
 }
 
