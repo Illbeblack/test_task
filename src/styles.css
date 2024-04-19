@@ -203,6 +203,45 @@ html {
   transform: rotate(45deg) translate(0, 50%);
 }
 
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    overflow-y: auto;
+    padding: 2rem;
+    background-color: var(--color-white);
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 3rem;
+  }
+
+  .nav__link {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    color: var(--color-black);
+    text-decoration: none;
+  }
+}
+
 /* GREETING */
 
 .header__greeting {
@@ -240,6 +279,7 @@ html {
   font-family: 'GraphikLCG-semibold';
   color: var(--color-black);
   font-size: 2rem;
+  line-height: 2.4rem;
 
   cursor: pointer;
   transition: ease-in-out 0.2s;
@@ -248,6 +288,26 @@ html {
 .greeting__btn:hover {
   background-color: var(--color-white);
 }
+
+@media (max-width: 768px) {
+  .header__greeting {
+    max-width: 47.6rem;
+    left: calc(50vw - 23.6rem);
+    top: calc(50vh - 11.4rem);
+  }
+
+  .greeting__header {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .greeting__text {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-bottom: 4rem;
+  }
+}
+
 /* SECTION_1 */
 
 .firstSection {
@@ -767,43 +827,4 @@ html {
   font-family: 'GraphikLCG-light';
   font-size: 1.8rem;
   line-height: 3.2rem;
-}
-
-@media (max-width: 768px) {
-  .burger {
-    display: flex;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 150;
-    overflow-y: auto;
-    padding: 2rem;
-    background-color: var(--color-white);
-  }
-
-  .nav__links {
-    position: absolute;
-    top: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    gap: 3rem;
-  }
-
-  .nav__link {
-    font-size: 1.8rem;
-    line-height: 3.2rem;
-    color: var(--color-black);
-    text-decoration: none;
-  }
 }
