@@ -141,3 +141,22 @@ $(document).ready(function () {
     });
   });
 });
+
+//BURGER MENU
+
+document.querySelector('.burger').addEventListener('click', function () {
+  this.classList.toggle('active');
+  document.querySelector('.nav').classList.toggle('open');
+  document.querySelector('.logo__text').classList.toggle('active');
+});
+
+const nav = document.getElementsByClassName('nav__item');
+let j;
+
+for (j = 0; j < nav.length; j++) {
+  nav[j].addEventListener('click', function () {
+    document.querySelector('.burger').classList.remove('active');
+    document.querySelector('.nav').classList.remove('open');
+    document.querySelector('.logo__text').classList.remove('active');
+  });
+}

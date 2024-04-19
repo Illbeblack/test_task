@@ -53,7 +53,9 @@ html {
 
 .section {
   margin: 0 auto;
-  max-width: 122rem;
+  padding: 0 2.5rem;
+
+  max-width: 127rem;
   color: var(--color-black);
 }
 
@@ -63,6 +65,11 @@ html {
   padding: 3rem;
   margin-top: 8rem;
 }
+
+.open {
+  display: flex !important;
+}
+
 /* HEADER */
 
 .header {
@@ -83,7 +90,7 @@ html {
 
 /* NAVIGATION */
 
-.nav {
+.menu {
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -91,10 +98,12 @@ html {
   align-items: center;
   max-width: 122rem;
   padding: 2.4rem;
-  z-index: 100;
+  z-index: 200;
 }
 
 .nav__logo {
+  position: relative;
+  z-index: 200;
   width: 12rem;
   display: flex;
   justify-content: space-between;
@@ -121,11 +130,15 @@ html {
   position: relative;
   z-index: 4;
   left: -1.2rem;
-  background-color: var(--color-white);
+  background-color: var(--color-light-gray);
 }
 
 .logo__text {
   font-size: 2rem;
+}
+
+.logo__text.active {
+  color: var(--color-black);
 }
 
 .nav__links {
@@ -141,12 +154,53 @@ html {
 .nav__link {
   font-family: 'GraphikLCG-light';
   font-size: 1.6rem;
+  line-height: 2.8rem;
   color: var(--color-white);
   text-decoration: none;
 }
 
 .nav__link:hover {
   text-decoration: underline;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  z-index: 250;
+  align-items: center;
+  justify-content: flex-end;
+  width: 3rem;
+  height: 1.2rem;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  height: 0.2rem;
+  width: 100%;
+  background-color: var(--color-white);
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active::before {
+  top: 50%;
+  background-color: var(--color-black);
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  background-color: var(--color-black);
+  transform: rotate(45deg) translate(0, 50%);
 }
 
 /* GREETING */
@@ -276,6 +330,7 @@ html {
 
 .secondSection__back_img {
   position: absolute;
+  max-width: 100%;
   z-index: -100;
 }
 
@@ -344,12 +399,12 @@ html {
 }
 
 .slider__btn--left {
-  left: -5%;
+  left: 2%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-  right: -5%;
+  right: -2%;
   transform: translate(50%, -50%);
   transform: rotate(180deg);
 }
@@ -712,4 +767,43 @@ html {
   font-family: 'GraphikLCG-light';
   font-size: 1.8rem;
   line-height: 3.2rem;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    overflow-y: auto;
+    padding: 2rem;
+    background-color: var(--color-white);
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 3rem;
+  }
+
+  .nav__link {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    color: var(--color-black);
+    text-decoration: none;
+  }
 }
